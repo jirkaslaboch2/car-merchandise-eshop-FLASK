@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="{{url_for('static', filename='logo.png')}}" alt="eShop Logo" class="logo" width="75"> 
+            Car Merchandise
+          </h1>
+                  <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5000">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/tos">TOS</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5000/cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <div class="product">
+                <img src="{{url_for('static', filename='prod1.png')}}" alt="Triko 1">
+                <h2>Tričko Kauťák - modrý</h2>
+                <p>$199.95</p>
+                <button onclick="location.href='http://127.0.0.1:5000/prod1'" id="prod1">View Product</button>
+            </div>
+            <div class="product">
+                <img src="{{url_for('static', filename='prod2 (1).png')}}" alt="Triko 2" width="product">
+                <h2>Tričko Kauťák - Růžové</h2>
+                <p>$29.98</p>
+                <button onclick="location.href='http://127.0.0.1:5000/prod2'" id="prod2">View Product</button>
+            </div>
+            <div class="product">
+                <img src="{{url_for('static', filename='prod3.png')}}" alt="Triko 3" width="product">
+                <h2>Kauťák - Vtipná edice</h2>
+                <p>$699.69</p>
+                <button onclick="location.href='http://127.0.0.1:5000/prod3'" id="prod2">View Product</button>
+            </div>
+            <div class="product">
+                <img src="{{url_for('static', filename='prod4.png')}}" alt="Kšiltovka 1" width="200">
+                <h2>Kšiltovka</h2>
+                <p>$29.99</p>
+                <button onclick="location.href='http://127.0.0.1:5000/prod4'" id="prod2">View Product</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Car Merchandise. All rights reserved.</p>
+    </footer>
+</body>
+
+<script>
+    const prod1 = document.getElementById("prod1");
+    prod1.addEventListener("mouseenter", function () {
+        prod1.style.backgroundColor = "red";
+        prod1.textContent = "you found an easter egg :)"
+    });
+
+    prod1.addEventListener("mouseleave", function () {
+        prod1.style.backgroundColor = "#28a745"
+        prod1.textContent = "View Product"
+    });
+</script>
+
+</html>

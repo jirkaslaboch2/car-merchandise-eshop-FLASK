@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - eShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{url_for('static', filename='checkout.js')}}"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="{{url_for('static', filename='logo.png')}}" alt="eShop Logo" class="logo" width="50"> eShop</a></h1>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/">Shop</a></li>
+                <li><a href="http://127.0.0.1:5000/tos">TOS</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5000/cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label>Name: <input type="text" name="name" required></label><br>
+            <label>Address: <input type="text" name="address" required></label><br>
+            <label>Email: <input type="email" name="email" required></label><br>
+          
+            <p>Payment Method:</p>
+            <label><input type="radio" name="payment" value="card" checked> Credit Card</label><br>
+            <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
+            <label><input type="radio" name="payment" value="beans"> Magic Beans</label><br>
+          
+            <div id="card-details">
+              <label>Card Number: <input type="text" placeholder="1234 5678 9012 3456"></label><br>
+              <label>Expiry: <input type="text" placeholder="MM/YY"></label><br>
+              <label>CVV: <input type="text" placeholder="123"></label><br>
+            </div>
+          
+            <button type="submit">Place Order</button>
+          </form>
+          
+    </main>
+    <footer>
+        <p>&copy; 2025 eShop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

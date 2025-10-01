@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 2 - eShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{url_for('static', filename='cart.js')}}"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="{{url_for('static', filename='logo.png')}}" alt="eShop Logo" class="logo" width="50"> eShop</a></h1>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/">Shop</a></li>
+                <li><a href="http://127.0.0.1:5000/tos">TOS</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5000/cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail">
+            <img src="{{url_for('static', filename='prod2.png')}}" alt="Product 2" width="200">
+            <div>
+                <h2>Product 2</h2>
+                <p>Description of Product 2.</p>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" 
+                data-id="product2" 
+                data-name="Product 2" 
+                data-price="29.98">
+            Add to Cart
+        </button>     
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 eShop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

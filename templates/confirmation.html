@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation - eShop</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{url_for('static', filename='confirmation.js')}}"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img src="{{url_for('static', filename='logo.png')}}" class="logo" width="50"> eShop</a></h1>
+  </header>
+
+  <main>
+    <h2>Thank You for Your Order!</h2>
+    <p>Your order was placed successfully. Here's a summary:</p>
+
+    <div id="order-summary">
+      <!-- Summary will be injected here by JS -->
+    </div>
+
+    <a href="http://127.0.0.1:5000/"><button>Back to Home</button></a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 eShop</p>
+  </footer>
+</body>
+</html>
