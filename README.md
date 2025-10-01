@@ -1,2 +1,3 @@
 # car-merchandise-eshop-FLASK
-Flask integration
+Flask integration of the car merchandise eshop source code
+
